@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import List from './List';
+import UserLists from './UserLists';
 import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <List />
+    <UserLists />
   </React.StrictMode>,
   document.getElementById('root')
 );
