@@ -22,16 +22,11 @@ export default class UserLists extends React.Component{
     render()
     {
         const listApi = this.state.lists;
-        var token = localStorage.getItem('token');
-
-        if(!token)
-            return <LoginComponent />
-        else 
             return(
                 <div>
                     {listApi.map(list => <List key={list.id} listName={list.name} items={list.item_set} />)}
                 </div>
-                    );
+                    )
     }
    
 }
