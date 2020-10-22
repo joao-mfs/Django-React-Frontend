@@ -13,7 +13,7 @@ export default class UserLists extends React.Component{
         }
         config.headers['Authorization'] = 'Token ' + localStorage.getItem('token');
         var url = ':8080/list';
-        const response = await fetch(url, config);
+        const response = await fetch('http://191.238.214.31:8080/list/', config);
         const data = await response.json();
         console.log(data);
         this.setState({lists: data, loading: false});
