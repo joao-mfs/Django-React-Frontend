@@ -49,6 +49,7 @@ export default class LoginComponent extends React.Component{
             <label>
               Nome:
               <input type="text" value={this.state.username} onChange={this.handleChange} />
+              Senha:
               <input type="password" value={this.state.password} onChange={this.handleChangePassword} />
 
             </label>
