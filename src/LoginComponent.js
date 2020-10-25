@@ -21,7 +21,7 @@ export default class LoginComponent extends React.Component{
       }
     
       handleSubmit(event) {
-         var url = 'http://191.238.214.31:8080/api-token-auth/';
+         var url = process.env.REACT_APP_API_HOST+ 'api-token-auth/';
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -47,7 +47,7 @@ export default class LoginComponent extends React.Component{
         return (
           <form onSubmit={this.handleSubmit}>
             <label>
-              Nome:
+              Nome: 
               <input type="text" value={this.state.username} onChange={this.handleChange} />
               <input type="password" value={this.state.password} onChange={this.handleChangePassword} />
 
