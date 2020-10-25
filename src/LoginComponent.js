@@ -1,6 +1,6 @@
 import React from 'react';
 import UserLists from './UserLists';
-var url = process.env.REACT_APP_API_HOST+ 'api-token-auth/';
+
 export default class LoginComponent extends React.Component{
     constructor(props) {
         super(props);
@@ -21,7 +21,7 @@ export default class LoginComponent extends React.Component{
       }
     
       handleSubmit(event) {
-         
+        var url = process.env.REACT_APP_API_HOST+ 'api-token-auth/';
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -47,7 +47,7 @@ export default class LoginComponent extends React.Component{
         return (
           <form onSubmit={this.handleSubmit}>
             <label>
-              Nome: {url}
+              Nome:
               <input type="text" value={this.state.username} onChange={this.handleChange} />
               <input type="password" value={this.state.password} onChange={this.handleChangePassword} />
 
