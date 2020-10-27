@@ -22,7 +22,6 @@ export default class LoginComponent extends React.Component{
     
       handleSubmit(event) {
         var url = process.env.REACT_APP_API_HOST+ 'api-token-auth/';
-        var tk = null;
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
